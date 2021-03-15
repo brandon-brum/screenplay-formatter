@@ -11,7 +11,7 @@ class format {
     }
 }
 
-formats = {
+let formats = {
     pageIndicator: new format(7.5, 0),
     action: new format(1.5, 1),
     dialogue: new format(2.9, 2.3),
