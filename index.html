@@ -10,13 +10,19 @@
         <p>Simply paste your script"s raw text into the text field below:</p>
     </header>
     <textarea></textarea>
+    <button onclick="onGenerateButton()">Generate Screenplay</button>
+    <a>Click here to see your script!</a>
+    <script>
+        document.querySelector("textarea").value = "fade in:\nint. Uncle Floyd's Kitchen : night\nUncle Floyd is in his kitchen, he's on the phone with a shady character, a man he really has no buisness messing with.\nUncle Floyd\n(angrily)\nI told you I'd get the money to you tomorrow.\nAunt Maggio is standing behind him, he is unaware of her angry presence.\nAunt Maggio\nWhat do you think you're doing?";
+        function onGenerateButton() {
+            console.log('generatebutton')
+            let finalScript = document.querySelector("textarea").value;
+            let finalScreenPlay = new screenPlay(finalScript);
+            finalScreenPlay.createPDF()
+        }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
     <script src="scripts/formatting.js"></script>
     <script src="scripts/screenPlay.class.js"></script>
-    <script>
-        document.querySelector("textarea").value = "fade in:\nint. Uncle Floyd's Kitchen : night\nUncle Floyd is in his kitchen, he's on the phone with a shady character, a man he really has no buisness messing with.\nUncle Floyd\n(angrily)\nI told you I'd get the money to you tomorrow.\nAunt Maggio is standing behind him, he is unaware of her angry presence.\nAunt Maggio\nWhat do you think you're doing?";
-        let testScript = document.querySelector("textarea").value;
-        let testScreenPlay = new screenPlay(testScript);
-    </script>
 </body>
 </html>
