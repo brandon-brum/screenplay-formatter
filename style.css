@@ -2,6 +2,27 @@
     margin:0;
 }
 
+#homeLink {
+  opacity:10%;
+  position:absolute;
+  display:inline-block;
+  top:15px;
+  left:20px;
+  width:100px;
+  height:100px;
+  transition:opacity 0.5s;
+}
+
+#homeLink:hover {
+  opacity:100%;
+  cursor:pointer;
+}
+
+#logo {
+  width:100px;
+  height:100px;
+}
+
 body {
     height:100vh;
     display:flex;
